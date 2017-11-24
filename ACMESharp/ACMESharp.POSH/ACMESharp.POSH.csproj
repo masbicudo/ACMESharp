@@ -93,6 +93,7 @@
     <Compile Include="Util\PkiHelper.cs" />
     <Compile Include="Util\PoshHelper.cs" />
     <Compile Include="Util\VaultHelper.cs" />
+    <Compile Include="XCmdlet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ACMESharp-AWS\ACMESharp-AWS.psm1">

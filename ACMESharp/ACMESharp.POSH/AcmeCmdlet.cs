@@ -14,7 +14,7 @@ namespace ACMESharp.POSH
 	/// <summary>
 	/// Base class for all ACMESharp cmdlets implementing common logic.
 	/// </summary>
-	public abstract class AcmeCmdlet : PSCmdlet
+	public abstract class AcmeCmdlet : XCmdlet
 	{
 		private static readonly Logger LOG = LogManager.GetCurrentClassLogger();
 
