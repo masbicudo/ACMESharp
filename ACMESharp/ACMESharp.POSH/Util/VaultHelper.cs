@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ACMESharp.POSH.Util
 {
-    public static class VaultHelper
+    public static partial class VaultHelper
     {
         static VaultHelper()
         {
@@ -20,6 +20,9 @@ namespace ACMESharp.POSH.Util
 
         public static IVault GetVault(string profileName = null)
         {
+            if (CustomVaultGetter != null)
+                return CustomVaultGetter();
+
             profileName = VaultProfileManager.ResolveProfileName(profileName);
             if (string.IsNullOrEmpty(profileName))
                 throw new InvalidOperationException("unable to resolve effective profile name");
